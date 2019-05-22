@@ -44,6 +44,7 @@ function generatePalette(starterPalette) {
          newPalette.colors[level] = [];
     };
 
+    // Push color level into index of color level array
     for (let color of starterPalette.colors ) {
         let scale = getScale(color.color, 10).reverse();
 

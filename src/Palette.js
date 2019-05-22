@@ -5,8 +5,8 @@ import './Palette.css';
 class Palette extends Component {
 
     render() {
-        const ColorBoxes = this.props.colors.map(color => (
-            <ColorBox background= {color.color}  name={color.name}/>
+        const ColorBoxes = this.props.palette.colors[600].map(color => (
+            <ColorBox background= {color.hex}  name={color.name}/>
         ))
 
         return (
