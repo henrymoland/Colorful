@@ -48,6 +48,13 @@
     font-size: 12px;
 }
 
+.light-text {
+  color: #fff;
+}
+
+.ColorBox .dark-text {
+  color: #000;
+}
 .see-more {
     background: rgba(255, 255, 255, 0.3);
     position: absolute;
