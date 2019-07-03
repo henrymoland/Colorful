@@ -8,7 +8,7 @@
     margin-bottom: -4px;
 }
 
-.copy-button {
+.copy-button, .back-btn {
     width: 100px;
     height: 30px;
     position: absolute;
@@ -25,7 +25,11 @@
     color: #FFF;
     text-transform: uppercase;
     border: none;
-    opacity: 0;
+    text-decoration: none;
+}
+
+.copy-button {
+  opacity: 0;
 }
 
 .ColorBox:hover .copy-button {
@@ -112,4 +116,12 @@
 .copy-message p {
   font-size: 2rem;
   font-weight: 100;
+}
+
+.single-color-palette .ColorBox {
+  height: 50%;
+}
+
+.ColorBox.go-back {
+  background-color: #000;
 }
