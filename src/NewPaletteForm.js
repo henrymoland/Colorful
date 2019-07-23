@@ -13,9 +13,10 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { ChromePicker } from 'react-color';
+import DraggableColorPalette from './DraggableColorPalette';
 
 
-const drawerWidth = 320;
+const drawerWidth = 400;
 
 const styles = theme => ({
   root: {
@@ -58,6 +59,7 @@ const styles = theme => ({
   },
   content: {
     flexGrow: 1,
+    height: "calc(100vh - 64px)",
     padding: theme.spacing.unit * 3,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
@@ -77,8 +79,8 @@ const styles = theme => ({
 class newPaletteForm extends Component {
   state = {
     open: true,
-    currentColor: "teal",
-    colors: ["puple", "#4929323"]
+    currentColor: "",
+    colors: []
   };
 
   handleDrawerOpen = () => {
@@ -158,11 +160,10 @@ class newPaletteForm extends Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          <ul>
             {this.state.colors.map(color => (
-              <li style={{backgroundColor: color}}>{color}</li>
+              <DraggableColorPalette color={color} />
             ))}
-          </ul>
+          
         </main>
       </div>
     );
