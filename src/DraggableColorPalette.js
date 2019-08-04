@@ -5,7 +5,6 @@ const styles = {
     root: {
         width: "20%",
         height: "25%",
-        margin: "0 auto",
         display: "inline-block",
         position: "relative",
         cursor: "pointer",
@@ -15,8 +14,8 @@ const styles = {
 
 const DraggableColorPalette = (props) => {
     return (
-        <div className={props.classes.root} style ={{backgroundColor: props.color }}>
-            {props.color}
+        <div className={props.classes.root} style={{backgroundColor: props.color }}>
+            {props.name}
         </div>
 
     )
